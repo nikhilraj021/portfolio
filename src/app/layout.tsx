@@ -1,16 +1,6 @@
 import type { Metadata } from "next";
-import { Outfit, Ovo, Poppins } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
-
-const ovo = Ovo({
-  weight: ["400"],
-  subsets: ["latin"],
-});
 
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -30,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} ${ovo.className} ${poppins.className} antialiased`}
+        className={`${poppins.className} antialiased`}
       >
         {children}
       </body>

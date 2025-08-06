@@ -8,8 +8,8 @@ const Navbar = () => {
                     <h1>Nikhilraj</h1>
                 </a>
 
-                <ul className='hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3'>
-                    <li>
+                <ul className='hidden font-ovo md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3'>
+                    <li className=''>
                         <a href="#top">Home</a>
                     </li>
                     <li>
