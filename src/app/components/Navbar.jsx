@@ -1,8 +1,21 @@
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { assets } from "../../../assets/assets.js";
+import { IoMoonOutline } from "react-icons/io5";
+import { FiMenu } from "react-icons/fi";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
+  const sideMenuRef = useRef();
+
+  const openMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(-16rem)";
+  };
+
+  const closeMenu = () => {
+    sideMenuRef.current.style.transform = "translateX(16rem)";
+  };
+
   return (
     <>
       <div className="fixed top-0right-0 w-11/12 -z-10 translate-y-[-80%] ">
@@ -34,20 +47,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <button>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="size-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
-              />
-            </svg>
+            <IoMoonOutline className="size-6" />
           </button>
           <a
             href="#contact"
@@ -55,23 +55,46 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <button className="block md:hidden ml-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="size-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
+          <button className="block md:hidden ml-3" onClick={openMenu}>
+            <FiMenu className="size-6 cursor-pointer" />
           </button>
         </div>
+
+        {/* Mobile menu  */}
+        <ul
+          ref={sideMenuRef}
+          className="font-ovo md:hidden flex flex-col gap-4 px-10 py-20 -right-64 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 "
+        >
+          <button className="absolute top-4 right-4" onClick={closeMenu}>
+            <RxCross2 className="size-6 cursor-pointer" />
+          </button>
+
+          <li>
+            <a href="#top" onClick={closeMenu}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#about" onClick={closeMenu}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#services" onClick={closeMenu}>
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#work" onClick={closeMenu}>
+              My Work
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={closeMenu}>
+              Contact
+            </a>
+          </li>
+        </ul>
       </nav>
     </>
   );
