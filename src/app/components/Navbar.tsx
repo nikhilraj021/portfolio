@@ -5,6 +5,7 @@ import { assets } from "../../../assets/assets.js";
 import { IoMoonOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
+import ThemeToggler from "../components/hoc/ThemeToggler";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
@@ -50,7 +51,11 @@ const Navbar = () => {
           <h1>Nikhilraj</h1>
         </a>
 
-        <ul className={`hidden font-ovo md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  ${isScroll ? "" : "bg-white/50 shadow-sm"}`}>
+        <ul
+          className={`hidden font-ovo md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  ${
+            isScroll ? "" : "bg-white/50 shadow-sm"
+          }`}
+        >
           <li className="">
             <a href="#top">Home</a>
           </li>
@@ -66,9 +71,10 @@ const Navbar = () => {
         </ul>
 
         <div className="flex items-center gap-4">
-          <button>
+          {/* <button>
             <IoMoonOutline className="size-6" />
-          </button>
+          </button> */}
+          <ThemeToggler />
           <a
             href="#contact"
             className="hidden md:block px-10 py-2.5 border border-gray-500 rounded-full "
