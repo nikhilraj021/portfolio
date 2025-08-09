@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio
+
+A modern, responsive portfolio web application built with Next.js, React, and Tailwind CSS. It showcases your skills, experience, and projects, and includes a contact form for collaboration opportunities.
+
+## Features
+
+- **Landing Page:** Eye-catching header with profile image and introduction.
+- **About Me:** Animated section with personal info, skills, and tools.
+- **Services:** List of professional services offered.
+- **Work/Portfolio:** Gallery of recent projects with descriptions.
+- **Contact:** Integrated contact form using Web3Forms API.
+- **Footer:** Simple footer for site navigation.
+- **Theme Support:** Light/dark mode toggle (using `next-themes`).
+- **Animations:** Smooth transitions and effects via Framer Motion.
+
+## Technologies Used
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [next-themes](https://github.com/pacocoursey/next-themes)
+- [Web3Forms](https://web3forms.com/) (for contact form)
+- [React Icons](https://react-icons.github.io/react-icons/)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js >= 18
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Running Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/components/` – Main React components (Header, AboutUs, Services, Work, Contact, Navbar, Footer)
+- `src/app/content/` – Data for info, services, tools, and work
+- `assets/` – Images and icons
+- `public/` – Static files (resume, images, SVGs)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to reach out via the contact form on the site!
