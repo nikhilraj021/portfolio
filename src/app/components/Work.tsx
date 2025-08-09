@@ -1,4 +1,8 @@
 import React from "react";
+import { workData } from "../content/work";
+import Image from "next/image";
+import { assert } from "console";
+import { assets } from "../../../assets/assets";
 
 const Work = () => {
   return (
@@ -11,6 +15,26 @@ const Work = () => {
         skills and creativity. Each project reflects my dedication to quality
         and innovation in Full Stack Development.
       </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
+        {workData.map((project, i) => (
+          <div
+            key={i}
+            style={{ backgroundImage: `url(${project.bgImage})` }}
+            className="aspect-square bg-no-repeat bg-cover bg-center relative group rounded-lg cursor-pointer"
+          >
+            <div className="absolute bg-white w-10/12 rounded-md bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-300 group-hover:bottom-7">
+              <div>
+                <h2 className="font-semibold">{project.title}</h2>
+                <p className="text-sm text-gray-700">{project.description}</p>
+              </div>
+              <div className="border rounded-full border-black aspect-square w-9 flex items-center justify-center shadow-[2px_2px_0px_#000] group-hover:bg-lime-300 trasition duration-300">
+                <Image src={assets.send_icon} alt="" className="w-5" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
