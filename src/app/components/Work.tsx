@@ -1,7 +1,6 @@
 import React from "react";
 import { workData } from "../content/work";
 import Image from "next/image";
-import { assert } from "console";
 import { assets } from "../../../assets/assets";
 
 const Work = () => {
