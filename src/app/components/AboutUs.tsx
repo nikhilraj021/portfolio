@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import { assets, infoList, toolsData } from "../../../assets/assets";
+import { assets } from "../../../assets/assets";
+import { infoList } from "../content/infoList";
+import { toolsData } from "../content/tools";
 
 // lighthover - #fcf4ff
 // darkhover - #2a004a
