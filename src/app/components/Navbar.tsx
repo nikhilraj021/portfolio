@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../../../assets/assets.js";
@@ -7,14 +8,18 @@ import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
-  const sideMenuRef = useRef();
+  const sideMenuRef = useRef<HTMLUListElement>(null);
 
   const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = "translateX(-16rem)";
+    }
   };
 
   const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
+    if (sideMenuRef.current) {
+      sideMenuRef.current.style.transform = "translateX(16rem)";
+    }
   };
 
   useEffect(() => {
