@@ -35,7 +35,7 @@ const AboutUs = () => {
             {infoList.map(({ icon, iconDark, title, description }, index) => (
               <li
                 key={index}
-                className="border-[0.5px] border-grey-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-[4px_4px_0_#000]"
+                className="border-[0.5px] border-grey-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black"
               >
                 <Image src={icon} alt="icon" className="w-7 mt-3" />
                 <h3 className="my-4 font-semibold text-grey-700">{title}</h3>
