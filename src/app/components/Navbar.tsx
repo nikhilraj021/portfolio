@@ -5,10 +5,13 @@ import { assets } from "../../../assets/assets.js";
 import { IoMoonOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
+import { useTheme } from "next-themes";
 import ThemeToggler from "../components/hoc/ThemeToggler";
 
 const Navbar = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme } = useTheme();
   const sideMenuRef = useRef<HTMLUListElement>(null);
 
   const openMenu = () => {
@@ -33,15 +36,24 @@ const Navbar = () => {
     });
   }, []);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // Only render the image div if we're not in dark mode
+  const renderImageDiv = mounted && theme !== 'dark';
+
   return (
     <>
-      <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] ">
+      {renderImageDiv && (
+        <div id="imagediv" className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <Image
           src={assets.header_bg_color}
           alt="bg-color-image"
-          className="w-full"
-        />
-      </div>
+            className="w-full"
+          />
+        </div>
+      )}
       <nav
         className={`w-full fixed flex justify-between items-center px-5 lg:px-8 xl:px-[8%] py-4 z-50 ${
           isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""
