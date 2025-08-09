@@ -10,7 +10,10 @@ const poppins = Poppins({
 const ovo = Ovo({
   weight: ["400"],
   subsets: ["latin"],
+  variable: "--font-ovo",
 });
+
+
 
 export const metadata: Metadata = {
   title: "Portfolio-Nikhilraj",

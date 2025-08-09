@@ -1,6 +1,6 @@
 
 @import "tailwindcss";
 
-@theme inline {
-    --font-ovo : "ovo", sans-serif;
+@theme {
+    --font-ovo : "Ovo", sans-serif;
 }
