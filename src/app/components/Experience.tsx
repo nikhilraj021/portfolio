@@ -91,7 +91,7 @@ export default function Experience() {
     {
       title: "Changelog",
       content: (
-        <div>
+        <div key={"Changelog"}>
           <p className="mb-4 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
             Deployed 5 new components on Aceternity today
           </p>

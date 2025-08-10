@@ -26,14 +26,25 @@ const Navbar = () => {
     }
   };
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScroll(true);
+    } else {
+      setIsScroll(false);
+    }
+  };
+
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        setIsScroll(true);
-      } else {
-        setIsScroll(false);
-      }
-    });
+    // Check scroll position on initial load
+    handleScroll();
+    
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+    
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   useEffect(() => {
