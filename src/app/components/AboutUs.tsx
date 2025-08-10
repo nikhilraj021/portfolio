@@ -2,8 +2,8 @@
 import Image from "next/image";
 import React from "react";
 import { assets } from "../../../assets/assets";
-import { infoList } from "../content/infoList";
-import { toolsData } from "../content/tools";
+import { infoList } from "../content/content";
+import { toolsData } from "../content/content";
 import { motion } from "framer-motion";
 
 const AboutUs = () => {

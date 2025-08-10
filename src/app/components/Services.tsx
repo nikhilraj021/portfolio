@@ -1,5 +1,6 @@
+"use client";
 import React from "react";
-import { serviceData } from "../content/services";
+import { serviceData } from "../content/content";
 import Image from "next/image";
 import { assets } from "../../../assets/assets";
 
