@@ -41,15 +41,18 @@ const Navbar = () => {
   }, []);
 
   // Only render the image div if we're not in dark mode
-  const renderImageDiv = mounted && theme !== 'dark';
+  const renderImageDiv = mounted && theme !== "dark";
 
   return (
     <>
       {renderImageDiv && (
-        <div id="imagediv" className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
-        <Image
-          src={assets.header_bg_color}
-          alt="bg-color-image"
+        <div
+          id="imagediv"
+          className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]"
+        >
+          <Image
+            src={assets.header_bg_color}
+            alt="bg-color-image"
             className="w-full"
           />
         </div>
@@ -60,7 +63,7 @@ const Navbar = () => {
         }`}
       >
         <a href="#top">
-          <h1>Nikhilraj</h1>
+          <Image src={assets.logo} alt="logo" className="w-24" />
         </a>
 
         <ul
@@ -73,6 +76,9 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#about">About</a>
+          </li>
+          <li>
+            <a href="#experience">Experience</a>
           </li>
           <li>
             <a href="#services">Services</a>
