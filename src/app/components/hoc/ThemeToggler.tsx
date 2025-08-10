@@ -23,9 +23,9 @@ const ThemeToggler = () => {
       className="transition duration-700 "
     >
       {currentTheme === "dark" ? (
-        <BiSun className="cursor-pointer size-7" />
-      ) : (
-        <BiMoon className="cursor-pointer size-7" />
+        <BiSun className="cursor-pointer size-6 md:size-7" />
+      ) : ( 
+        <BiMoon className="cursor-pointer size-6 md:size-7" />
       )}
     </button>
   );

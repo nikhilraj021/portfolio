@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 max-md:pt-10">
       <motion.div
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
@@ -26,7 +26,6 @@ const Header = () => {
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo "
       >
         Hi I'm Nikhilraj Dumpeti
-        <Image src={assets.hand_icon} alt="hand-icon" className="w-6" />
       </motion.h3>
 
       <motion.h1
@@ -56,11 +55,6 @@ const Header = () => {
           className="px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2"
         >
           Contact Me
-          <Image
-            src={assets.right_arrow_white}
-            alt="profile-pic"
-            className="w-4"
-          />
         </motion.a>
         <motion.a
           initial={{ y: 30, opacity: 0 }}
@@ -72,7 +66,6 @@ const Header = () => {
           className="px-10 py-3 border border-gray-500 rounded-full flex items-center gap-2"
         >
           My Resume
-          <Image src={assets.download_icon} alt="profile-pic" className="w-4" />
         </motion.a>
       </div>
     </div>
