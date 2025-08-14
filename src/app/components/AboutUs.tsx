@@ -13,7 +13,7 @@ const AboutUs = () => {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       id="about"
-      className="w-full px-[12%] py-10 scroll-mt-20"
+      className="w-full px-[12%] pt-10 scroll-mt-20"
     >
       <motion.h4
         initial={{ y: -20, opacity: 0 }}
@@ -91,7 +91,7 @@ const AboutUs = () => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, delay: 1.2 }}
-            className="my-6 text-gray-700 font-ovo"
+            className="mt-6 text-gray-700 font-ovo"
           >
             Tools I use
           </motion.h4>

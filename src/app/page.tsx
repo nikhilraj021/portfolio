@@ -8,6 +8,7 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
+import Service from "./components/Service";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <Header />
       <AboutUs />
       <Experience />
-      <Services />
+      {/* <Services /> */}
+      <Service />
       <Work />
       <Contact />
       <Footer />
