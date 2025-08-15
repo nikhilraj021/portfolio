@@ -72,7 +72,7 @@ const Work = () => {
         transition={{ duration: 0.5, delay: 0.7 }}
         className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo"
       >
-        Here you can explore some of the projects I've worked on showcasing my
+        Here you can explore some of the projects I&apos;ve worked on showcasing my
         skills and creativity. Each project reflects my dedication to quality
         and innovation in Full Stack Development.
       </motion.p>

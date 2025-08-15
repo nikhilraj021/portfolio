@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins,Lora } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Provider from "./components/hoc/Provider";
 
@@ -8,10 +8,6 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-const lora = Lora({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Portfolio-Nikhilraj",
