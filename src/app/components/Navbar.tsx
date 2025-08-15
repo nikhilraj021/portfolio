@@ -70,11 +70,11 @@ const Navbar = () => {
       )}
       <nav
         className={`w-full fixed flex justify-between items-center px-5 lg:px-8 xl:px-[8%] py-4 z-50 ${
-          isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm" : ""
+          isScroll ? "bg-white/50 backdrop-blur-lg shadow-sm text-black " : ""
         }`}
       >
         <a href="#top">
-          <h1 className="font-lora text-4xl font-extrabold dark:text-white cursor-pointer">DNR</h1>
+          <h1 className={`font-lora text-4xl font-extrabold ${isScroll ? 'text-black' : 'dark:text-white'} cursor-pointer`}>DNR</h1>
         </a>
 
         <ul
@@ -118,7 +118,7 @@ const Navbar = () => {
         {/* Mobile menu  */}
         <ul
           ref={sideMenuRef}
-          className="font-ovo md:hidden flex flex-col gap-4 px-10 py-20 -right-64 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 "
+          className="font-ovo md:hidden flex flex-col gap-4 px-10 py-20 -right-64 fixed top-0 bottom-0 w-64 z-50 h-screen bg-gradient-to-r from-zinc-950 to-zinc-800 text-white dark:from-zinc-800 dark:to-zinc-950 transition duration-500 "
         >
           <button className="absolute top-4 right-4" onClick={closeMenu}>
             <RxCross2 className="size-6 cursor-pointer" />

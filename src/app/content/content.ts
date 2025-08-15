@@ -86,7 +86,7 @@ export const serviceData = [
 ]
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.git, assets.postman,
+    assets.vscode, assets.firebase, assets.mongodb, assets.git,
 ];
 
 export const workData = [
