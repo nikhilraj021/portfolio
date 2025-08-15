@@ -62,7 +62,7 @@ export const infoList = [
     icon: assets.code_icon,
     iconDark: assets.code_icon_dark,
     title: "Languages",
-    description: "HTML, CSS, JavaScript, Typescript, React Js, Next Js",
+    description: "HTML, CSS, JavaScript, Typescript, React Js, Next Js, Python.",
   },
   {
     icon: assets.edu_icon,
@@ -86,7 +86,7 @@ export const serviceData = [
 ]
 
 export const toolsData = [
-    assets.vscode, assets.firebase, assets.mongodb, assets.figma, assets.git
+    assets.vscode, assets.firebase, assets.mongodb, assets.git, assets.postman,
 ];
 
 export const workData = [

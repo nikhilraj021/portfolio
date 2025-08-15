@@ -7,7 +7,6 @@ import project_icon from './project-icon.png';
 import project_icon_dark from './project-icon-dark.png';
 import vscode from './vscode.png';
 import firebase from './firebase.png';
-import figma from './figma.png';
 import git from './git.png';
 import mongodb from './mongodb.png';
 import logo from './logo.png';
@@ -41,6 +40,7 @@ import database from './database.png';
 import stonepedia from './stonepedia.png';
 import e_education from './e_education.png';
 import nxt_trends from './nxtrends.png';
+import postman from './postman.jpg';
 
 
 export const assets = {
@@ -53,7 +53,6 @@ export const assets = {
     project_icon_dark,
     vscode,
     firebase,
-    figma,
     git,
     mongodb,
     logo,
@@ -86,7 +85,8 @@ export const assets = {
     database,
     stonepedia,
     e_education,
-    nxt_trends
+    nxt_trends,
+    postman,
 };
 
 
