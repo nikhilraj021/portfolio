@@ -40,27 +40,49 @@
 
 // export default Work;
 
-
 "use client";
 import React from "react";
 import { PinContainer } from "./ui/3d-pin";
 import { workData } from "../content/content";
+import { motion } from "framer-motion";
 
 const Work = () => {
   return (
     <div id="work" className="w-full px-[12%] py-10 scroll-mt-20 relative z-30">
-      <h4 className="text-center mb-2 text-lg font-ovo">My Portfolio</h4>
-      <h2 className="text-center text-5xl font-ovo">My Latest Work</h2>
+      <motion.h4
+        initial={{ y: -20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center mb-2 text-lg font-ovo"
+      >
+        My Portfolio
+      </motion.h4>
+      <motion.h2
+        initial={{ y: -30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="text-center text-5xl font-ovo"
+      >
+        My Latest Work
+      </motion.h2>
 
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo">
+      <motion.p
+        initial={{ y: -40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-ovo"
+      >
         Here you can explore some of the projects I've worked on showcasing my
         skills and creativity. Each project reflects my dedication to quality
         and innovation in Full Stack Development.
-      </p>
+      </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 my-10 relative z-30">
         {workData.map((project, i) => (
-          <div key={i} className="flex items-center justify-center w-full h-[25rem] relative z-30">
+          <div
+            key={i}
+            className="flex items-center justify-center w-full h-[25rem] relative z-30"
+          >
             <PinContainer
               title={project.title}
               href={project.link || "#"}
@@ -73,7 +95,7 @@ const Work = () => {
                 <p className="text-base !m-0 !p-0 font-normal text-slate-500">
                   {project.description}
                 </p>
-                <div 
+                <div
                   className="flex-1 w-full rounded-lg mt-4 bg-cover bg-no-repeat bg-center relative z-30"
                   style={{ backgroundImage: `url(${project.bgImage})` }}
                 />
