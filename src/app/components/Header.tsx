@@ -25,7 +25,7 @@ const Header = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
         className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-ovo "
       >
-        Hi I'm Nikhilraj Dumpeti
+        Hi I&apos;m Nikhilraj Dumpeti
       </motion.h3>
 
       <motion.h1

@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../../../assets/assets.js";
-import { IoMoonOutline } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { useTheme } from "next-themes";

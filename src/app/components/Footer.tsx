@@ -1,8 +1,5 @@
-import Image from "next/image";
 import React from "react";
-import { assets } from "../../../assets/assets";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { IoIosMail } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
