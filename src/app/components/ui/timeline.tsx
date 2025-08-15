@@ -34,8 +34,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   return (
     <div
-      id="experience"
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10 scroll-mt-20 pb-10 md:my-10"
+      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10 md:py-10"
       ref={containerRef}
     >
       {/* <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">

@@ -270,7 +270,7 @@ export default function Experience() {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
+    <div id="experience" className="relative w-full overflow-clip scroll-mt-20">
       <Timeline data={data} />
     </div>
   );

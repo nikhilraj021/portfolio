@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { assets } from "../../../assets/assets.js";
@@ -37,10 +37,10 @@ const Navbar = () => {
   useEffect(() => {
     // Check scroll position on initial load
     handleScroll();
-    
+
     // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-    
+
     // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -78,7 +78,7 @@ const Navbar = () => {
         </a>
 
         <ul
-          className={`hidden font-ovo md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3  ${
+          className={`hidden font-ovo md:flex items-center gap-4 lg:gap-8 rounded-full px-12 py-3  ${
             isScroll ? "" : "bg-white/50 shadow-sm"
           }`}
         >
@@ -106,7 +106,7 @@ const Navbar = () => {
           <ThemeToggler />
           <a
             href="#contact"
-            className="hidden md:block px-10 py-2.5 border border-gray-500 rounded-full "
+            className="hidden md:block md:px-3 lg:px-10 py-2.5 border border-gray-500 rounded-full "
           >
             Contact
           </a>
@@ -124,7 +124,7 @@ const Navbar = () => {
             <RxCross2 className="size-6 cursor-pointer" />
           </button>
 
-          <li>
+          <li className="">
             <a href="#top" onClick={closeMenu}>
               Home
             </a>
@@ -135,6 +135,11 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a href="#experience" onClick={closeMenu}>
+              Experience
+            </a>
+          </li>
+          <li>
             <a href="#services" onClick={closeMenu}>
               Services
             </a>
@@ -142,11 +147,6 @@ const Navbar = () => {
           <li>
             <a href="#work" onClick={closeMenu}>
               My Work
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={closeMenu}>
-              Contact
             </a>
           </li>
         </ul>
