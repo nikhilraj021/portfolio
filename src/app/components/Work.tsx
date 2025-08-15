@@ -67,7 +67,7 @@ const Work = () => {
               containerClassName="relative z-30"
             >
               <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[20rem] relative z-30">
-                <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+                <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-black dark:text-slate-100">
                   {project.title}
                 </h3>
                 <p className="text-base !m-0 !p-0 font-normal text-slate-500">
