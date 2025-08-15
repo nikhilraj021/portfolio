@@ -16,27 +16,27 @@ export default function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Stripe",
+    title: "Full Stack Development",
     description:
-      "A technology company that builds economic infrastructure for the internet.",
-    link: "https://stripe.com",
+      "Delivering complete web solutions from frontend UI to backend logic, ensuring seamless integration.",
+    link: "",
   },
   {
-    title: "Netflix",
+    title: "Backend Development",
     description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
+      "Developing secure and scalable server-side applications with Node.js, Express, and REST APIs.",
+    link: "",
   },
   {
-    title: "Google",
+    title: "Frontend Development",
     description:
-      "A multinational technology company that specializes in Internet-related services and products.",
-    link: "https://google.com",
+      "Building responsive, user-friendly interfaces using React, Next.js, Tailwind CSS, and modern UI frameworks.",
+    link: "",
   },
   {
-    title: "Meta",
+    title: "Version Control",
     description:
-      "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
-    link: "https://meta.com",
+      "Managing source code efficiently and deploying applications with modern CI/CD practices.",
+    link: "",
   },
 ];
