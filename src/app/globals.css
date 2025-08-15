@@ -6,6 +6,7 @@
 
 @theme {
     --font-ovo :  "Ovo", serif;
+    --font-lora : "Lora", serif;
     --color-lightHover: #fcf4ff;
     --color-darkHover: #2a004a;
     --shadow-black : 4px 4px 0px #000;
