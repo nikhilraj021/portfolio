@@ -1,16 +1,15 @@
 
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { BackgroundBeamsWithCollision } from "./ui/background-beams-with-collision";
 import { motion } from "framer-motion";
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function BackgroundBeamsWithCollisionDemo() {
-  const [result, setResult] = useState("");
+
 
   const onSubmit = async (event: any) => {
     event.preventDefault();
-    setResult("Sending....");
     const formData = new FormData(event.target);
 
     formData.append("access_key", "047af6da-f899-42c0-bc23-3f3d8ebb1e18");
@@ -25,11 +24,9 @@ export default function BackgroundBeamsWithCollisionDemo() {
     if (data.success) {
       toast.success('Message sent successfully!');
       event.target.reset();
-      setResult("");
     } else {
       console.error("Error", data);
       toast.error(data.message || 'Failed to send message. Please try again.');
-      setResult(data.message);
     }
   };
   return (
@@ -113,7 +110,7 @@ export default function BackgroundBeamsWithCollisionDemo() {
             type="submit"
             className="py-3 px-8 w-max bg-black/80 text-white flex items-center justify-between gap-2 rounded-full mx-auto hover:bg-black duration-500 "
           >
-            Let's Talk
+            Let&apos;s Talk
           </motion.button>
           {/* {result && <p className="mt-4 text-center">{result}</p>} */}
         </form>
