@@ -8,25 +8,31 @@ import toast, { Toaster } from 'react-hot-toast';
 export default function BackgroundBeamsWithCollisionDemo() {
 
 
-  const onSubmit = async (event: any) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
 
     formData.append("access_key", "047af6da-f899-42c0-bc23-3f3d8ebb1e18");
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json() as { success: boolean; message?: string; };
 
-    if (data.success) {
-      toast.success('Message sent successfully!');
-      event.target.reset();
-    } else {
-      console.error("Error", data);
-      toast.error(data.message || 'Failed to send message. Please try again.');
+      if (data.success) {
+        toast.success('Message sent successfully!');
+        form.reset();
+      } else {
+        console.error("Error", data);
+        toast.error(data.message || 'Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      toast.error('Failed to send message. Please try again later.');
     }
   };
   return (

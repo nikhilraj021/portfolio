@@ -28,7 +28,7 @@ export const PinContainer = ({
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
 
-  const handleClick = (e: React.MouseEvent) => {
+  const handleClick = () => {
     if (href) {
       window.open(href, '_blank', 'noopener,noreferrer');
     }
@@ -45,9 +45,9 @@ export const PinContainer = ({
       onMouseLeave={onMouseLeave}
       role={href ? 'link' : undefined}
       tabIndex={href ? 0 : undefined}
-      onKeyDown={(e) => {
-        if ((e.key === 'Enter' || e.key === ' ') && href) {
-          e.preventDefault();
+      onKeyDown={(event) => {
+        if ((event.key === 'Enter' || event.key === ' ') && href) {
+          event.preventDefault();
           window.open(href, '_blank', 'noopener,noreferrer');
         }
       }}
@@ -70,17 +70,15 @@ export const PinContainer = ({
           </div>
         </div>
       </div>
-      <PinPerspective title={title} href={href} />
+      <PinPerspective title={title} />
     </div>
   );
 };
 
 export const PinPerspective = ({
   title,
-  href,
 }: {
   title?: string;
-  href?: string;
 }) => {
   return (
     <motion.div className="pointer-events-none w-96 h-80 flex items-center justify-center opacity-0 group-hover/pin:opacity-100 z-10 transition duration-500">
