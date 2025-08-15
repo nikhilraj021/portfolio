@@ -149,6 +149,11 @@ const Navbar = () => {
               My Work
             </a>
           </li>
+          <li>
+            <a href="#contact" onClick={closeMenu}>
+              Contact
+            </a>
+          </li>
         </ul>
       </nav>
     </>

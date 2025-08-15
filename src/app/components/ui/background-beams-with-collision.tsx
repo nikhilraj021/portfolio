@@ -74,7 +74,7 @@ const parentRef = useRef<HTMLDivElement>(null);
     <div
       ref={parentRef}
       className={cn(
-        "h-96 md:h-fit bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
+        "h-fit bg-gradient-to-b from-white to-neutral-100 dark:from-neutral-950 dark:to-neutral-800 relative flex items-center w-full justify-center overflow-hidden",
         // h-screen if you want bigger
         className
       )}
