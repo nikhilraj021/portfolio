@@ -74,7 +74,7 @@ const Navbar = () => {
         }`}
       >
         <a href="#top">
-          <h1 className="font-lora text-4xl font-extrabold dark:text-white">DNR</h1>
+          <h1 className="font-lora text-4xl font-extrabold dark:text-white cursor-pointer">DNR</h1>
         </a>
 
         <ul
