@@ -74,7 +74,7 @@ const Work = () => {
                   {project.description}
                 </p>
                 <div 
-                  className="flex-1 w-full rounded-lg mt-4 bg-cover bg-center relative z-30"
+                  className="flex-1 w-full rounded-lg mt-4 bg-cover bg-no-repeat bg-center relative z-30"
                   style={{ backgroundImage: `url(${project.bgImage})` }}
                 />
               </div>

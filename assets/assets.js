@@ -38,6 +38,9 @@ import reactjs from './reactjs.png';
 import nodejs from './nodejs.png';
 import python from './python.png';
 import database from './database.png';
+import stonepedia from './stonepedia.png';
+import e_education from './e_education.png';
+import nxt_trends from './nxtrends.png';
 
 
 export const assets = {
@@ -80,7 +83,10 @@ export const assets = {
     reactjs, 
     nodejs,
     python,
-    database
+    database,
+    stonepedia,
+    e_education,
+    nxt_trends
 };
 
 

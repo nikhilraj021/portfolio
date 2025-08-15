@@ -91,27 +91,27 @@ export const toolsData = [
 
 export const workData = [
     {
-        title: 'Frontend project',
-        description: 'Web Design',
-        bgImage: '/work-1.png',
-        link: '#'
+        title: 'Stonepedia E-commerce',
+        description: 'Blackcoat.Ai',
+        bgImage: assets.stonepedia.src,
+        link: 'https://stonepedia.in'
     },
     {
-        title: 'Geo based app',
-        description: 'Mobile App',
-        bgImage: '/work-2.png',
-        link: '#'
+        title: 'E-Education',
+        description: 'SpyD Technologies',
+        bgImage: assets.e_education.src,
+        link: 'https://e-education.in'
     },
     {
-        title: 'Photography site',
-        description: 'Web Design',
-        bgImage: '/work-3.png',
-        link: '#'
+        title: 'Nxt Trends E-commerce',
+        description: 'NxtWave Technologies',
+        bgImage: assets.nxt_trends.src,
+        link: 'https://appnxttrendz.ccbp.tech/login'
     },
-    {
-        title: 'UI/UX designing',
-        description: 'UI/UX Design',
-        bgImage: '/work-4.png',
-        link: '#'
-    },
+    // {
+    //     title: 'Jobby Application',
+    //     description: 'NxtWave Technologies',
+    //     bgImage: '/work-4.png',
+    //     link: 'https://appjobby1.ccbp.tech/login'
+    // },
 ]
