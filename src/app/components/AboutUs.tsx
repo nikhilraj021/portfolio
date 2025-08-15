@@ -59,11 +59,11 @@ const AboutUs = () => {
           className="flex-1"
         >
           <p className="mb-10 font-ovo max-w-2xl">
-            I'm a passionate software developer specializing in Mern-stack
+            I&apos;m a passionate software developer specializing in Mern-stack
             development with expertise in JavaScript, React, and Node.js. I
             focus on building user-friendly applications and writing clean code.
-            I’m passionate about continuous learning and collaboration. Check
-            out my portfolio to see my work!
+            I&apos;m passionate about continuous learning and collaboration.
+            Check out my portfolio to see my work!
           </p>
 
           <motion.ul
@@ -72,7 +72,7 @@ const AboutUs = () => {
             transition={{ duration: 0.8, delay: 1 }}
             className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-2xl"
           >
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
+            {infoList.map(({ icon, title, description }, index) => (
               <motion.li
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
