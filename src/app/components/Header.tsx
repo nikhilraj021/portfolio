@@ -34,7 +34,7 @@ const Header = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
         className="text-3xl md:text-6xl lg:text-[66px] font-ovo"
       >
-        Full Stack Developer at BlackCoat.Ai
+        Full Stack Developer at Blackcoat.Ai
       </motion.h1>
 
       <motion.p
@@ -63,7 +63,7 @@ const Header = () => {
           href="/Nikhilraj_Dumpeti_Resume.pdf"
           download
           target="_blank"
-          className="px-10 py-3 border border-gray-500 rounded-full flex items-center gap-2"
+          className="px-10 py-3 border border-gray-500 dark:bg-white dark:text-black dark:border-black hover:scale-105 transition-all duration-500 rounded-full flex items-center gap-2"
         >
           My Resume
         </motion.a>
