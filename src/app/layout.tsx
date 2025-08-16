@@ -21,10 +21,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+      </head>
       <body
-        className={`${poppins.className} antialiased leading-8 overflow-x-hidden`}
+        className={`${poppins.className} antialiased leading-8 overflow-x-hidden min-h-screen`}
       >
-        <Provider >{children}</Provider>
+        <Provider>
+          <div className="min-h-screen flex flex-col">
+            {children}
+          </div>
+        </Provider>
       </body>
     </html>
   );
