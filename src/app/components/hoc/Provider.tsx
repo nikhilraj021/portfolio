@@ -3,7 +3,8 @@ import React, { ReactNode } from 'react'
 
 const Provider = ({children} : {children : ReactNode}) => {
   return (
-    <ThemeProvider attribute='class' defaultTheme="system" enableSystem>
+    // defaultTheme="system"  it will load according to system theme
+    <ThemeProvider attribute='class' defaultTheme="light" enableSystem> 
       {children}
     </ThemeProvider>
   )
